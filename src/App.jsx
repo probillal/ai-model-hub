@@ -21,7 +21,7 @@ function App() {
     <>
       <section id="center">
         <div>
-          <NavBar></NavBar>
+          <NavBar carts={carts}></NavBar>
           <Banner></Banner>
           <div className="tabs tabs-box justify-center bg-transparent shadow-none">
             <input
@@ -36,7 +36,7 @@ function App() {
               type="radio"
               name="my_tabs_1"
               className="tab rounded-full w-40"
-              aria-label="Cart"
+              aria-label={`Cart (${carts.length})`}
               onClick={() => setActiveTab("cart")}
             />
           </div>

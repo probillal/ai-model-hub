@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { toast } from "react-toastify";
 
 const AiModelCard = ({ model, carts, setCarts }) => {
   console.log(model);
@@ -6,6 +7,7 @@ const AiModelCard = ({ model, carts, setCarts }) => {
   const handleSubscription = () => {
     setIsSubscribe(true);
     setCarts([...carts, model]);
+    toast.success("Item added Successfully!");
   };
   return (
     <div className="card bg-base-100 w-96 shadow-2xl border border-zinc-500 pt-5">

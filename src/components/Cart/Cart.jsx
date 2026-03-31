@@ -1,11 +1,13 @@
 import React from "react";
 import { MdDeleteOutline } from "react-icons/md";
+import { toast } from "react-toastify";
 
 const Cart = ({ cart, carts, setCarts }) => {
   const handleDeleteItem = (cart) => {
     console.log("click");
     const filterCart = carts.filter((item) => item.id !== cart.id);
     setCarts(filterCart);
+    toast.success("Item deleted Successfully!");
   };
   return (
     <div className="mt-5">
