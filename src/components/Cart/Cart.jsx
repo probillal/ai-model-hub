@@ -15,12 +15,11 @@ const Cart = ({ cart }) => {
             <h2 className="text-xl font-semibold flex gap-2 items-center">
               {cart.title}
             </h2>
-            <p>$ {cart.price} /month</p>
           </div>
         </div>
-        <button className="btn text-red-500 text-2xl">
-          <MdDeleteOutline />
-        </button>
+        <div>
+          <p>$ {cart.price} /month</p>
+        </div>
       </div>
     </div>
   );
