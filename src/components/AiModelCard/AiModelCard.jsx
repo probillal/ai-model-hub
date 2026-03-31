@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 
 const AiModelCard = ({ model }) => {
   console.log(model);
+  const [isSubscribe, setIsSubscribe] = useState(false);
   return (
-    <div className="card bg-base-100 w-96 shadow-lg border border-zinc-50 pt-5">
+    <div className="card bg-base-100 w-96 shadow-2xl border border-zinc-500 pt-5">
       <figure className="">
         <img
           className="w-40 h-40 object-contain transition-transform duration-300 hover:scale-90"
@@ -18,8 +19,11 @@ const AiModelCard = ({ model }) => {
           <span className="text-2xl font-semibold">$ {model.price}</span> /month
         </h4>
         <div className="card-actions mt-5">
-          <button className="btn bg-red-600 hover:bg-red-500 w-full rounded-xl">
-            Buy Now
+          <button
+            onClick={() => setIsSubscribe(true)}
+            className="btn bg-red-600 hover:bg-red-500 w-full rounded-xl"
+          >
+            {isSubscribe ? "Subscribe" : "Subscribe Now"}
           </button>
         </div>
       </div>

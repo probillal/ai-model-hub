@@ -27,9 +27,9 @@ const NavBar = () => {
         </ul>
       </div>
       <div className="navbar-end gap-5">
-        <div className="bg-zinc-200 rounded-full p-2 text-center">
+        <div className="bg-zinc-200 hover:bg-red-500 rounded-full p-2 text-center">
           {" "}
-          <FaShoppingCart className="text-2xl text-red-600 hover:text-red-500" />
+          <FaShoppingCart className="text-2xl text-red-600 hover:text-white duration-200 transition-all" />
         </div>
         <a className="btn bg-red-600 hover:bg-red-500 rounded-full text-white">
           Get in Touch
