@@ -4,7 +4,7 @@ import { FaShoppingCart } from "react-icons/fa";
 
 const NavBar = () => {
   return (
-    <div className="navbar container mx-auto">
+    <div className="navbar container mx-auto shadow-2xl">
       <div className="navbar-start">
         <div className="flex items-center gap-1 font-bold text-xl">
           <img className="w-10" src={navLogo} /> Ai Hub
