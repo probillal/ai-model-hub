@@ -1,8 +1,12 @@
 import React, { useState } from "react";
 
-const AiModelCard = ({ model }) => {
+const AiModelCard = ({ model, carts, setCarts }) => {
   console.log(model);
   const [isSubscribe, setIsSubscribe] = useState(false);
+  const handleSubscription = () => {
+    setIsSubscribe(true);
+    setCarts([...carts, model]);
+  };
   return (
     <div className="card bg-base-100 w-96 shadow-2xl border border-zinc-500 pt-5">
       <figure className="">
@@ -20,7 +24,7 @@ const AiModelCard = ({ model }) => {
         </h4>
         <div className="card-actions mt-5">
           <button
-            onClick={() => setIsSubscribe(true)}
+            onClick={handleSubscription}
             className="btn bg-red-600 hover:bg-red-500 w-full rounded-xl"
           >
             {isSubscribe ? "Subscribe" : "Subscribe Now"}

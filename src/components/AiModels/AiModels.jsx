@@ -1,9 +1,10 @@
 import React, { use } from "react";
 import AiModelCard from "../AiModelCard/AiModelCard";
 
-const AiModels = ({ modelPromise }) => {
+const AiModels = ({ modelPromise, carts, setCarts }) => {
   const models = use(modelPromise);
-  console.log(models);
+  //   console.log(models);
+
   return (
     <div className=" py-8 md:py-20">
       <div className=" text-center space-y-2">
@@ -12,7 +13,12 @@ const AiModels = ({ modelPromise }) => {
       </div>
       <div className="container mx-auto grid md:grid-cols-2 lg:grid-cols-3 justify-center gap-5 mt-16">
         {models.map((model) => (
-          <AiModelCard key={model.id} model={model}></AiModelCard>
+          <AiModelCard
+            key={model.id}
+            model={model}
+            carts={carts}
+            setCarts={setCarts}
+          ></AiModelCard>
         ))}
       </div>
     </div>
