@@ -5,6 +5,11 @@ const AiModelCard = ({ model, carts, setCarts }) => {
   console.log(model);
   const [isSubscribe, setIsSubscribe] = useState(false);
   const handleSubscription = () => {
+    const isFound = carts.find((item) => item.id === model.id);
+    if (isFound) {
+      toast.error("Item already in cart");
+      return;
+    }
     setIsSubscribe(true);
     setCarts([...carts, model]);
     toast.success("Item added Successfully!");
