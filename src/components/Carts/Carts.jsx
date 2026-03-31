@@ -16,7 +16,7 @@ const Carts = ({ carts, setCarts }) => {
       ) : (
         <>
           {carts.map((cart) => (
-            <Cart cart={cart}></Cart>
+            <Cart cart={cart} carts={carts} setCarts={setCarts}></Cart>
           ))}
           <div className="flex justify-between items-center gap-4 border p-5 rounded-3xl mt-8">
             <div>
