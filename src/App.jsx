@@ -1,4 +1,4 @@
-import { Suspense, useState } from "react";
+import { useState } from "react";
 import "./App.css";
 import AiModels from "./components/AiModels/AiModels";
 import Banner from "./components/Banner/Banner";
@@ -11,8 +11,8 @@ const fetchModels = async () => {
   return res.json();
 };
 
+const modelPromise = fetchModels();
 function App() {
-  const modelPromise = fetchModels();
   const [activeTab, setActiveTab] = useState("model");
   const [carts, setCarts] = useState([]);
   console.log(carts);
@@ -41,17 +41,11 @@ function App() {
             />
           </div>
           {activeTab === "model" && (
-            <Suspense
-              fallback={
-                <span className="loading loading-spinner loading-lg"></span>
-              }
-            >
-              <AiModels
-                modelPromise={modelPromise}
-                carts={carts}
-                setCarts={setCarts}
-              ></AiModels>
-            </Suspense>
+            <AiModels
+              modelPromise={modelPromise}
+              carts={carts}
+              setCarts={setCarts}
+            ></AiModels>
           )}
           {activeTab === "cart" && <Carts carts={carts}></Carts>}
           <Footer></Footer>
