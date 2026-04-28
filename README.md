@@ -19,10 +19,11 @@ AI Model Hub is a modern subscription-based web application UI where users can e
 * Fully mobile responsive
   
 🛠️ Tech Stack
-React.js
-Tailwind CSS
-JavaScript (ES6+)
-React Router DOM
+
+* React.js
+* Tailwind CSS
+* JavaScript (ES6+)
+* React Router DOM
 
 📸 Preview
 
@@ -31,27 +32,36 @@ React Router DOM
 
 
 ⚙️ Installation & Setup
+
 # Clone the repository
+
 git clone https://github.com/probillal/ai-model-hub.git
 
 # Navigate to project folder
+
 cd ai-model-hub
 
 # Install dependencies
+
 npm install
 
 # Run development server
+
 npm run dev
+
 📈 Future Improvements
 🔐 User authentication system
 💳 Real payment/subscription integration
 🤖 AI model API integration
 📊 Dashboard for users
+
 👨‍💻 Author
 
 S M Billal Hossain
+
 Frontend Developer
-React | Tailwind CSS | ES6
+
+React | Tailwind CSS | JavaScript (ES6+)
 
 ⭐ Support
 
